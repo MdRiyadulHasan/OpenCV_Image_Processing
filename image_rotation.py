@@ -1,0 +1,10 @@
+import cv2
+img=cv2.imread('images\messi.jpg',1)
+img=cv2.resize(img,(0,0), fx=.5, fy=.5)
+img1=cv2.rotate(img, cv2.ROTATE_90_CLOCKWISE)
+img2=cv2.rotate(img, cv2.ROTATE_90_COUNTERCLOCKWISE)
+cv2.imshow('original_image',img)
+cv2.imshow('rotation_clockwise',img1)
+cv2.imshow('rotation_counter_clockwise',img2)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
